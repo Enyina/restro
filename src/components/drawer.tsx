@@ -270,6 +270,10 @@ const Drawer: React.FC<ModalContentProps> = ({onOpen}) => {
   const [activeCategory, setActiveCategory] = useState(Menu[0].categoryId);
  const dispatch = useDispatch()
 
+ const activeMenu = Menu
+ ?.find((category) => category.categoryId === activeCategory)
+ console.log({activeMenu});
+ 
   const handleCategoryClick = (categoryId: number): void => {
     setActiveCategory(categoryId);
   };
@@ -316,9 +320,7 @@ const Drawer: React.FC<ModalContentProps> = ({onOpen}) => {
             <div className="p-1">
               {activeCategory && (
                 <div className="mb-10">
-                  {Menu
-                    ?.find((category) => category.categoryId === activeCategory)
-                    ?.content.map((item) => (
+                  {activeMenu?.content.map((item:MenuContentItem) => (
                       // <Link key={item.id} href={"/product/id"}>
                         <div
                           key={item.id}
@@ -340,7 +342,7 @@ const Drawer: React.FC<ModalContentProps> = ({onOpen}) => {
                             </p>
                             <div className=" flex  gap-12 mt-2">
                               <h2 className=" text-black text-base font-bold">
-                                N {item.price}
+                                N {item.price.toLocaleString()}
                               </h2>
                               <div className=" bg-Primary_color p-1 rounded-lg ml-2 flex items-center justify-center absolute bottom-0 right-2">
                                 <MdArrowForward

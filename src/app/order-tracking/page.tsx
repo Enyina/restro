@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const Page = () => {
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const [orderStatus, setOrderStatus] = useState(0);
-    // setTimeout(() => setOrderStatus(orderStatus + 1), 5000);
+    setTimeout(() => setOrderStatus(orderStatus + 1), 5000);
   console.log({ orderStatus });
 
   const openReviewModal = () => setIsReviewModalOpen(true);

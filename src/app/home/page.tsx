@@ -116,7 +116,7 @@ const Page = () => {
             <h2 className="  text-black text-base font-bold">{meal.name}</h2>
             <p className=" text-gray-400 my-1 text-xs"> {meal.description}</p>
             <div className=" flex  gap-12 mt-2">
-            <h2 className=" text-black text-base font-bold">N {meal.price}</h2>
+            <h2 className=" text-black text-base font-bold">N {meal.price.toLocaleString()}</h2>
             <div className=" bg-Primary_color p-1 rounded-lg ml-2 flex items-center justify-center absolute bottom-0 right-2">
                     <MdArrowForward
                       style={{

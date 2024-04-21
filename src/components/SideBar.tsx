@@ -48,30 +48,30 @@ const MenuComponent: React.FC = () => {
                 <ul className=" gap-5 flex flex-col text-base font-bold ">
                   <li
                     className={`cursor-pointer ${
-                      activeItem === 0 ? "text-[#F36829]" : ""
-                    }`}
-                    onClick={() => handleClick(0)}>
-                    <Link href="/home">Home</Link>
-                  </li>
-                  <li
-                    className={`cursor-pointer ${
                       activeItem === 1 ? "text-[#F36829]" : ""
                     }`}
                     onClick={() => handleClick(1)}>
-                    <Link href="/menu">Menu</Link>
+                    <Link href="/home">Home</Link>
                   </li>
                   <li
                     className={`cursor-pointer ${
                       activeItem === 2 ? "text-[#F36829]" : ""
                     }`}
                     onClick={() => handleClick(2)}>
-                    <Link href="/orders">Order Cart</Link>
+                    <Link href="/menu">Menu</Link>
                   </li>
                   <li
                     className={`cursor-pointer ${
                       activeItem === 3 ? "text-[#F36829]" : ""
                     }`}
                     onClick={() => handleClick(3)}>
+                    <Link href="/orders">Order Cart</Link>
+                  </li>
+                  <li
+                    className={`cursor-pointer ${
+                      activeItem === 4 ? "text-[#F36829]" : ""
+                    }`}
+                    onClick={() => handleClick(4)}>
                     <Link href="/order-tracking">Order Tracking</Link>
                   </li>
                 </ul>

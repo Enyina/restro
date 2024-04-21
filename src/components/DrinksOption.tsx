@@ -6,26 +6,29 @@ import styles from "./styles.module.css";
 import { FaAngleDown } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 
-
 interface DrinkOption {
   name: string; // Name of the option (e.g., "Small", "Tall")
 }
+interface DrinksOptionsProps {
+  item: {
+    topCategory: string;
+    compositions: DrinkOption[];
+  };
+  setSelectedDrink: (drink: string) => void;
+}
 
-const DrinksOptions = ({
-  item,
-}: {
-  item: { topCategory: string; compositions: DrinkOption[] };
-}) => {
+const DrinksOptions: React.FC<DrinksOptionsProps> = ({ item, setSelectedDrink }: DrinksOptionsProps)  => {
   const [selectedOptions, setSelectedOptions] = useState<DrinkOption[]>([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeDrink, setActiveDrink] = useState(null); // State to track the active drink option
-  const [selectedDrink, setSelectedDrink] = useState({}); // State to store the values of the selected drink
+  // State to store the values of the selected drink
 
   // Function to handle click on a drink option
   const handleDrinkClick = (drinkName: any, drinkQuantity: any) => {
     // Set the active drink and selected drink state
     setActiveDrink(drinkName);
-    setSelectedDrink({ name: drinkName, quantity: drinkQuantity });
+    const size = `${drinkName} (${drinkQuantity})`
+    setSelectedDrink(size);
   };
 
   const toggleDropdown = () => {
@@ -103,23 +106,32 @@ const DrinksOptions = ({
         </div>
 
         <div className="mt-7 relative">
-          <div className="text-black font-bold text-[12px]">Additional Options</div>
+          <div className="text-black font-bold text-[12px]">
+            Additional Options
+          </div>
           <div className="bg-[#F8F8F8] rounded-xl border-orange-200 mt-3 flex justify-between items-center p-2 ">
             <div
               className="flex items-center flex-wrap gap-1  "
               // style={{ height: additionalOptionsHeight }}
-              >
+            >
               {selectedOptions.map((option, index) => (
-                <div key={index} className=" bg-[#438A2A] text-nowrap flex rounded-lg justify-center gap-2 p-1 items-center">
+                <div
+                  key={index}
+                  className=" bg-[#438A2A] text-nowrap flex rounded-lg justify-center gap-2 p-1 items-center">
                   <p className="text-white  text-xs">{option.name}</p>
-                  <MdCancel  onClick={() => handleRemoveOption(option)} className=" bg-green-700 text-white  text-xs"/>
-
+                  <MdCancel
+                    onClick={() => handleRemoveOption(option)}
+                    className=" bg-green-700 text-white  text-xs"
+                  />
                 </div>
               ))}
             </div>
-         
-            <FaAngleDown style={{width:"30px", height:"30px"}} onClick={toggleDropdown} className=" text-Primary_color"/>
-         
+
+            <FaAngleDown
+              style={{ width: "30px", height: "30px" }}
+              onClick={toggleDropdown}
+              className=" text-Primary_color"
+            />
           </div>
           {isDropdownOpen && (
             <div className=" bg-default_background_color flex flex-col gap-4 rounded-xl p-2 absolute z-50 top-full left-0 w-full overflow-y-auto max-h-36 shadow-md">

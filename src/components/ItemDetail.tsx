@@ -4,7 +4,7 @@ import Image from "next/image";
 import IngredientsUsed from "./IngredentsUsed";
 import Recommendations, { Recommendation } from "./Recomendation";
 import DrinksOptions from "./DrinksOption";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToSingleOrder, isAdded } from "@/app/GlobalRedux/features/cart/cartSlice";
 import Menu from "../../dummyData/allCategory.json";
@@ -14,6 +14,14 @@ import { RootState } from "@/app/GlobalRedux/store";
 
 interface ModalContentProps {
   onClose: () => void;
+}
+interface cartContentItem {
+  id: number;
+  image: string;
+  name: string;
+  description: string;
+  categoryName: string;
+  price: number;
 }
 const items = [
   { name: "Galic" },
@@ -67,55 +75,82 @@ const RecommendationsArray: Recommendation[] = [
   // ... add more recommendations
 ];
 const ItemDetail: React.FC<ModalContentProps> = ({ onClose }) => {
+  const [product, setProduct] = useState({} as cartContentItem);
+  const [quantity, setQuantity] = useState(1);
   const itemId = useSelector((state: RootState) => state.cart.itemId);
-  const product = findItemById(Menu , itemId);
-  if (product) {
-    console.log("Found item:", product);
-    // Access item details: foundItem.name, foundItem.price, etc.
-  } else {
-    console.log("Item with ID", itemId, "not found.");
-  }
+  const [selectedDrink, setSelectedDrink] = useState('Small (12inc)');
+
+  
+  const handleSelectedDrink = (drink: string ) => {
+    setSelectedDrink(drink); // Update state with the selected drink object
+    console.log('Selected Drink:', drink); // Optional: Log the selected drink for debugging or further actions
+  };
+
+  useEffect(() => {
+    function findItemById(data : any, itemId : number) {
+      for (const category of data) {
+        for (const item of category.content) {
+          if (item.id === itemId) {
+            return {
+              categoryId: category.categoryId,
+              categoryName: category.name,
+              ...item, // Include all item properties
+            };
+          }
+        }
+      }
+      return null; // If item not found, return null
+    }
+    setProduct( ()=> findItemById(Menu , itemId))
+
+  
+    
+    // if (product) {
+    //   console.log("Found item:", product);
+    //   // Access item details: foundItem.name, foundItem.price, etc.
+    // } else {
+    //   console.log("Item with ID", itemId, "not found.");
+    // }
+
+    // setTotalPrice(quantity * product.price)
+  }, [itemId])
+
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [totalPrice, setTotalPrice] = useState(product?.price);
-  const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
 
-  function findItemById(data : any, itemId : number) {
-    for (const category of data) {
-      for (const item of category.content) {
-        if (item.id === itemId) {
-          return {
-            categoryId: category.categoryId,
-            categoryName: category.name,
-            ...item, // Include all item properties
-          };
-        }
-      }
-    }
-    return null; // If item not found, return null
-  }
+
   const handleClick = () => {
+    console.log({selectedDrink});
+    
     setIsPopupOpen(true);
     dispatch(
       addToSingleOrder({
-        id: 1,
-        name: "Rice",
-        size: "", // Optional property for size
-        price: "3,000",
-        totalPrice: "6,000",
-        image: "/images/temp/salad1.jpeg",
-        quantity: 2,
+        id: product?.id,
+        name: product?.name,
+        size:selectedDrink, // Optional property for size
+        price: product?.price,
+        totalPrice: (product?.price*quantity).toLocaleString(),
+        image:product.image ,
+        quantity,
       })
       );
       setTimeout(() => dispatch(isAdded({isAdded:false})), 3000); // Hide popup after 2 seconds
   };
-
+const increase =()=>{
+  setQuantity((prev) => prev + 1)
+    setTotalPrice(quantity * product.price)
+}
+const decrease =()=>{
+  setQuantity((prev) => (prev > 1 ? prev - 1 : 1))
+    setTotalPrice(quantity * product.price)
+}
   return (
     // <div
     //   className={`bg-default_background_color m-1 w-full rounded-3xl p-0 min-h-screen md:mx-24 lg:mx-48 xl:mx-96 `}>
     //   <div className=" w-full min-h-min  flex flex-col gap-1 relative">
-    <div className=" w-full min-h-screen p-7 flex flex-col gap-12 relative bg-default_background_color m-auto">
+    <div className=" w-full min-h-screen p-7 flex flex-col gap-12 relative bg-default_background_color m-auto justify-end">
       {/* <div
           style={{
             backgroundImage: "url(/images/temp/salad1.jpeg)",
@@ -166,6 +201,7 @@ const ItemDetail: React.FC<ModalContentProps> = ({ onClose }) => {
               { name: "Soy Milk" },
             ],
           }}
+          setSelectedDrink={handleSelectedDrink} 
         />
       )}
       {/* DrinksOption Session start*/}
@@ -190,7 +226,7 @@ const ItemDetail: React.FC<ModalContentProps> = ({ onClose }) => {
           <div className="flex gap-2">
             <button
               className="flex justify-center items-center py-3 px-6 rounded-lg text-Primary_color  border border-gray-400 hover:bg-Primary_color hover:text-white hover:border-transparent transition duration-300 "
-              onClick={() => setQuantity((prev) => (prev > 1 ? prev - 1 : 1))}>
+              onClick={decrease}>
               -
             </button>
             <p className="flex justify-center items-center p-2 rounded-lg">
@@ -198,7 +234,7 @@ const ItemDetail: React.FC<ModalContentProps> = ({ onClose }) => {
             </p>
             <button
               className="flex justify-center items-center py-3 px-6 rounded-lg text-Primary_color  border border-gray-400 hover:bg-Primary_color hover:text-white hover:border-transparent transition duration-300"
-              onClick={() => setQuantity((prev) => prev + 1)}>
+              onClick={increase}>
               +
             </button>
           </div>
@@ -207,7 +243,7 @@ const ItemDetail: React.FC<ModalContentProps> = ({ onClose }) => {
             className=" bg-Primary_color flex justify-center items-center p-3 rounded-lg text-white"
             onClick={handleClick}>
             {" "}
-            Add (N {totalPrice})
+            Add (N {(product?.price*quantity).toLocaleString()})
           </button>
         </div>
       </div>

@@ -19,28 +19,28 @@
         "price":  1500
       },
       {
-        "id": 102,
+        "id": 103,
         "image": "/images/rice/rice-native.png",
         "name": "Native Rice",
         "description": "Savory rice dish with vegetables, meat, or seafood.",
         "price":  1500
       },
       {
-        "id": 102,
+        "id": 104,
         "image": "/images/rice/white-rice.png",
         "name": "White Rice",
         "description": "Savory rice dish with vegetables, meat, or seafood.",
         "price":  1500
       },
       {
-        "id": 102,
+        "id": 105,
         "image": "/images/rice/white-rice.png",
         "name": "Chineese Rice",
         "description": "Savory rice dish with vegetables, meat, or seafood.",
         "price": 1000
       },
       {
-        "id": 102,
+        "id": 106,
         "image": "/images/rice/white-rice.png",
         "name": "special Rice",
         "description": "Savory rice dish with vegetables, meat, or seafood.",

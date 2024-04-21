@@ -18,16 +18,17 @@ const Page = () => {
   const [isFamilyItemOpen, setIsFamilyItemOpen] = useState(10000);
   const dispatch = useDispatch();
   const drawerTab = useSelector((state: RootState) => state.cart.orderTab);
-  const ord = useSelector((state: RootState) => state.cart.singleOrder);
-  // console.log({ord});
+  const single = useSelector((state: RootState) => state.cart.singleOrder);
+  const family = useSelector((state: RootState) => state.cart.FamilyOrder);
+  console.log({single});
   
-
+  
   const openPaymentModal = () => setIsPaymentModalOpen(true);
   const closePaymentModal = () => setIsPaymentModalOpen(false);
   const openDisclaimerModal = () => setIsDisclaimerModalOpen(true);
   const closeDisclaimerModal = () => setIsDisclaimerModalOpen(false);
   // console.log({ isFamilyItemOpen });
-
+  
   const setDrawer = (index: number) => {
     setState("index");
 
@@ -55,7 +56,8 @@ const Page = () => {
       image: "/images/temp/culet.png",
     },
   ];
-
+  console.log({singleOrder});
+  
   const familyOrder = [
     [
       {
@@ -97,9 +99,9 @@ const Page = () => {
     ],
   ];
   // Calculate the sum of totalPrice values
-const singleOrderTotalPriceSum = singleOrder.reduce((acc, item) => acc + Number(item.totalPrice.replace(/,/g, '')), 0);
-const familyOrderTotalPriceSum = familyOrder.flat().reduce((sum, item) => sum + parseInt(item.totalPrice.replace(/,/g, ''), 10), 0);
-
+  const singleOrderTotalPriceSum = singleOrder.reduce((acc, item) => acc + Number(item.totalPrice.replace(/,/g, '')), 0);
+  const familyOrderTotalPriceSum = familyOrder.flat().reduce((sum, item) => sum + parseInt(item.totalPrice.replace(/,/g, ''), 10), 0);
+  
   return (
     <div className="  ">
       <Hero compName="Order Cart" />
@@ -108,10 +110,10 @@ const familyOrderTotalPriceSum = familyOrder.flat().reduce((sum, item) => sum + 
         {state === "single" && (
           <div className="flex flex-col gap-10">
             <div className="pt-12 flex flex-col gap-7 ">
-              {singleOrder.map((order) => (
+              {single.map((order) => (
                 <div
-                  key={order.id}
-                  className=" bg-white flex gap-3 items-center p-3 rounded-2xl relative">
+                key={order.id}
+                className=" bg-white flex gap-3 items-center p-3 rounded-2xl relative">
                   <Image src={order.image} alt="" width={115} height={115} />
                   <div className="flex flex-col gap-2.5">
                     <p className=" text-base text-black font-bold">
