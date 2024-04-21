@@ -1,0 +1,30 @@
+.custom_thumb::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  background: #ddd;
+  border-radius: 50%;  
+  border: 3px solid #F36829;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01)
+}
+
+.custom_thumb{
+  -webkit-appearance: none;
+  height: 3px;
+  width: 100%;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .activeDrink {
+     /* Change the background color */
+    border-radius: 9999px; /* Add a round border */
+    border: 2px solid #5A8A2A
+; /* Border color */
+    color: #5A8A2A
+; /* Text color */
+  }
