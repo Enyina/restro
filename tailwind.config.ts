@@ -8,10 +8,27 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        default_background_color: "#EBEBEB",
+        Secondry_color: "#99AF57",
+        text_color: " #3c3c3c",
+        Primary_color: " #f36829",
+      },
+      customForms: {
+        slider: {
+          thumb: {
+            ".custom_thumb": {
+              // Styles for the slider thumb
+              appearance: "none",
+              height: "18px",
+              width: "18px",
+              background: "#ddd",
+              borderRadius: "50%",
+              border: "3px solid orange",
+              cursor: "pointer",
+            },
+          },
+        },
       },
     },
   },

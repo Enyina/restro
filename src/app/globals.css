@@ -3,31 +3,35 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --text-color: #3c3c3c;
+  --Primary-color: #f36829;
+  --Secondry-color: #b9cd7c;
+  --default-background-color: white;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --text-color: #3c3c3c;
+    --Primary-color: #f36829;
+    --Secondry-color: #b9cd7c;
+    --default-background-color: white;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--text-color);
+  background-image: url("/images/hero.png");
+  /* box-sizing: border-box; */
+  font-family: Inter;
+  padding: 2%;
+  
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
 }
+
+
