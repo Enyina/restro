@@ -68,6 +68,13 @@ const RecommendationsArray: Recommendation[] = [
 ];
 const ItemDetail = () => {
   const itemId = useSelector((state: RootState) => state.cart.itemId);
+  const [selectedDrink, setSelectedDrink] = useState('Small (12inc)');
+
+  
+  const handleSelectedDrink = (drink: string ) => {
+    setSelectedDrink(drink); // Update state with the selected drink object
+    console.log('Selected Drink:', drink); // Optional: Log the selected drink for debugging or further actions
+  };
   const product = findItemById(Menu, itemId);
   if (product) {
     console.log("Found item:", product);
@@ -166,6 +173,8 @@ const ItemDetail = () => {
               { name: "Soy Milk" },
             ],
           }}
+          
+          setSelectedDrink={handleSelectedDrink} 
         />
       )}
       {/* DrinksOption Session start*/}
