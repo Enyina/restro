@@ -67,7 +67,7 @@ const RecommendationsArray: Recommendation[] = [
 ];
 const ItemDetail: React.FC<ModalContentProps> = ({ onClose }) => {
   const itemId = useSelector((state: RootState) => state.cart.itemId);
-  const product = findItemById(Menu, itemId);
+  const product = findItemById(Menu , itemId);
   if (product) {
     console.log("Found item:", product);
     // Access item details: foundItem.name, foundItem.price, etc.
@@ -80,7 +80,7 @@ const ItemDetail: React.FC<ModalContentProps> = ({ onClose }) => {
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
 
-  function findItemById(data, itemId) {
+  function findItemById(data : any, itemId : number) {
     for (const category of data) {
       for (const item of category.content) {
         if (item.id === itemId) {

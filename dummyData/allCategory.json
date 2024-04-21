@@ -9,42 +9,42 @@
         "image": "/images/rice/rice-jellof.png",
         "name": "Jollof Rice",
         "description": "Aromatic rice dish cooked with tomatoes, peppers, and spices.",
-        "price": " 1,000"
+        "price":  1000
       },
       {
         "id": 102,
         "image": "/images/rice/fried-rice.png",
         "name": "Fried Rice",
         "description": "Savory rice dish with vegetables, meat, or seafood.",
-        "price": " 1,500"
+        "price":  1500
       },
       {
         "id": 102,
         "image": "/images/rice/rice-native.png",
         "name": "Native Rice",
         "description": "Savory rice dish with vegetables, meat, or seafood.",
-        "price": " 1,500"
+        "price":  1500
       },
       {
         "id": 102,
         "image": "/images/rice/white-rice.png",
         "name": "White Rice",
         "description": "Savory rice dish with vegetables, meat, or seafood.",
-        "price": " 1,500"
+        "price":  1500
       },
       {
         "id": 102,
         "image": "/images/rice/white-rice.png",
         "name": "Chineese Rice",
         "description": "Savory rice dish with vegetables, meat, or seafood.",
-        "price": "1,000"
+        "price": 1000
       },
       {
         "id": 102,
         "image": "/images/rice/white-rice.png",
         "name": "special Rice",
         "description": "Savory rice dish with vegetables, meat, or seafood.",
-        "price": " 1,500"
+        "price":  1500
       }
     ]
   },
@@ -58,28 +58,28 @@
         "image": "/images/soup/Egusi-Soup.png",
         "name": "Egusi Soup",
         "description": "A rich and flavorful soup made with melon seeds, vegetables, and meat.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 202,
         "image": "/images/soup/vegetable-soup.png",
         "name": "Vegetable Soup",
         "description": "Creamy tomato soup, perfect for a light meal.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 203,
         "image": "/images/soup/banga-soup.png",
         "name": "Banga Soup",
         "description": "Creamy tomato soup, perfect for a light meal.",
-        "price": " 1,500"
+        "price":  1500
       },
       {
         "id": 204,
         "image": "/images/soup/okro-soup.png",
         "name": "Okra Soup",
         "description": "Creamy tomato soup, perfect for a light meal.",
-        "price": " 1,500"
+        "price":  1500
       }
     ]
   },
@@ -93,28 +93,28 @@
         "image": "/images/protein/culet.png",
         "name": "Chicken Cutlets",
         "description": "Tender chicken pieces simmered in a flavorful sauce.",
-        "price": "3,000"
+        "price": 3000
       },
       {
         "id": 302,
         "image": "/images/protein/chicken-wings.png",
         "name": "Chicken Wings",
         "description": "Fresh fish grilled to perfection with your choice of seasoning.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 303,
         "image": "/images/protein/goat-meat.png",
         "name": "Goat Meat",
         "description": "Fresh fish grilled to perfection with your choice of seasoning.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 304,
         "image": "/images/protein/beef.png",
         "name": "Beef",
         "description": "Fresh fish grilled to perfection with your choice of seasoning.",
-        "price": " 1,000"
+        "price": 1000
       }
     ]
   },
@@ -128,28 +128,28 @@
         "image": "/images/swallow/Pounded-Yam.png",
         "name": "Pounded Yam",
         "description": "Mashed yams, a popular staple food in West Africa.",
-        "price": "500"
+        "price": 500
       },
       {
         "id": 402,
         "image": "/images/swallow/Semo.png",
         "name": "Semovit",
         "description": "Starch-based dough made from cassava flour.",
-        "price": "500"
+        "price": 500
       },
       {
         "id": 403,
         "image": "/images/swallow/eba.png",
         "name": "Eba",
         "description": "Starch-based dough made from cassava flour.",
-        "price": "500"
+        "price": 500
       },
       {
         "id": 404,
         "image": "/images/swallow/Starch.png",
         "name": "Starch",
         "description": "Starch-based dough made from cassava flour.",
-        "price": "500"
+        "price": 500
       }
     ]
   },
@@ -163,28 +163,28 @@
         "image": "/images/sause/chiken sause.png",
         "name": "Chicken Stew",
         "description": "A flavorful tomato-based sauce for stews and soups.",
-        "price": "3,500"
+        "price": 3500
       },
       {
         "id": 502,
         "image": "/images/sause/Chineese sauce.png",
         "name": "Chinese Sauce",
         "description": "Spicy tomato-based sauce for jollof rice.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 503,
         "image": "/images/sause/ofada.png",
         "name": "Ofada Sauce",
         "description": "Spicy tomato-based sauce for jollof rice.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 504,
         "image": "/images/sause/Beef--Stew-.png",
         "name": "Beef Stew",
         "description": "Spicy tomato-based sauce for jollof rice.",
-        "price": " 1,000"
+        "price": 1000
       }
     ]
   },
@@ -198,28 +198,28 @@
         "image": "/images/drinks/coke.png",
         "name": "Coca-Cola",
         "description": "Choose from a variety of fresh fruit juices.",
-        "price": "1,000"
+        "price": 1000
       },
       {
         "id": 602,
         "image": "/images/drinks/fanta.png",
         "name": "Fanta",
         "description": "Choose from a selection of popular sodas.",
-        "price": "1,000"
+        "price": 1000
       },
       {
         "id": 603,
         "image": "/images/drinks/orange-juice.png",
         "name": "Orange Juice",
         "description": "Still or sparkling bottled water.",
-        "price": " 1,500"
+        "price":  1500
       },
       {
         "id": 604,
         "image": "/images/drinks/eva-water.png",
         "name": "Bottled Water",
         "description": "Still or sparkling bottled water.",
-        "price": " 1,000"
+        "price": 1000
       }
     ]
   },
@@ -233,35 +233,35 @@
         "image": "/images/breakfast/coff.png",
         "name": "Black Coffee",
         "description": "Scrambled, fried, or omelet, served with your choice of sides.",
-        "price": "3,000"
+        "price": 3000
       },
       {
         "id": 702,
         "image": "/images/breakfast/waffles.png",
         "name": "Waffles",
         "description": "Fluffy pancakes served with butter and syrup.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 703,
         "image": "/images/breakfast/pancake.png",
         "name": "Pancakes",
         "description": "Hearty oatmeal with your choice of toppings.",
-        "price": " 1,500"
+        "price":  1500
       },
       {
         "id": 704,
         "image": "/images/breakfast/eggs.png",
         "name": "Scrambled Eggs",
         "description": "Hearty oatmeal with your choice of toppings.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 705,
         "image": "/images/sause/chiken sause.png",
         "name": "Special Salad",
         "description": "A flavorful tomato-based sauce for stews and soups.",
-        "price": "5,500"
+        "price": 5500
       }
     ]
   },
@@ -275,35 +275,35 @@
         "image": "/images/desert/cup-cake.png",
         "name": "Cup Cakes",
         "description": "Choose from a variety of delicious cakes.",
-        "price": "3,000"
+        "price": 3000
       },
       {
         "id": 802,
         "image": "/images/desert/Ice-Cream.png",
         "name": "Ice Cream",
         "description": "Scoops of your favorite ice cream flavors.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 803,
         "image": "/images/desert/meat-pie.png",
         "name": "Meat Pie",
         "description": "Refreshing mix of seasonal fruits.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 804,
         "image": "/images/desert/Egg-Rolls.png",
         "name": "Fruit Salad",
         "description": "Refreshing mix of seasonal fruits.",
-        "price": " 1,000"
+        "price": 1000
       },
       {
         "id": 805,
         "image": "/images/popular/potato.png",
         "name": "Potato Potage",
         "description": "A flavorful tomato-based sauce for stews and soups.",
-        "price": "1,500"
+        "price": 1500
       }
     ]
   }
