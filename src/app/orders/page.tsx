@@ -19,14 +19,14 @@ const Page = () => {
   const dispatch = useDispatch();
   const drawerTab = useSelector((state: RootState) => state.cart.orderTab);
   const ord = useSelector((state: RootState) => state.cart.singleOrder);
-  console.log({ord});
+  // console.log({ord});
   
 
   const openPaymentModal = () => setIsPaymentModalOpen(true);
   const closePaymentModal = () => setIsPaymentModalOpen(false);
   const openDisclaimerModal = () => setIsDisclaimerModalOpen(true);
   const closeDisclaimerModal = () => setIsDisclaimerModalOpen(false);
-  console.log({ isFamilyItemOpen });
+  // console.log({ isFamilyItemOpen });
 
   const setDrawer = (index: number) => {
     setState("index");
