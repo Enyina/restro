@@ -1,0 +1,33 @@
+[
+  {
+    "id": 401,
+    "image": "/images/swallow/Pounded-Yam.png",
+    "name": "Pounded Yam",
+  "price": 500
+  },
+  {
+    "id": 402,
+    "image": "/images/swallow/Semo.png",
+    "name": "Semovit",
+    "price": 500
+  },
+  {
+    "id": 403,
+    "image": "/images/swallow/eba.png",
+    "name": "Eba",
+    "price": 500
+  },
+  {
+    "id": 404,
+    "image": "/images/swallow/Starch.png",
+    "name": "Starch",
+    "price": 500
+  },
+  {
+    "id": 604,
+    "image": "/images/drinks/eva-water.png",
+    "name": "Bottled Water",
+    "description": "Still or sparkling bottled water.",
+    "price": 1000
+  }
+]

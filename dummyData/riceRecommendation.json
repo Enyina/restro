@@ -1,0 +1,53 @@
+[
+    {
+        "id": 301,
+        "image": "/images/protein/culet.png",
+        "name": "Chicken Cutlets",
+        "price": 3000
+      },
+      {
+        "id": 302,
+        "image": "/images/protein/chicken-wings.png",
+        "name": "Chicken Wings",
+        "price":  1000
+      },
+      {
+        "id": 303,
+        "image": "/images/protein/goat-meat.png",
+        "name": "Goat Meat",
+        "price":  1000
+      },
+      {
+        "id": 304,
+        "image": "/images/protein/beef.png",
+        "name": "Beef",
+        "price": 1000
+      },  {
+        "id": 601,
+        "image": "/images/drinks/coke.png",
+        "name": "Coca-Cola",
+        "description": "Choose from a variety of fresh fruit juices.",
+        "price": 1000
+      },
+      {
+        "id": 602,
+        "image": "/images/drinks/fanta.png",
+        "name": "Fanta",
+        "description": "Choose from a selection of popular sodas.",
+        "price": 1000
+      },
+      {
+        "id": 603,
+        "image": "/images/drinks/orange-juice.png",
+        "name": "Orange Juice",
+        "description": "Still or sparkling bottled water.",
+        "price":  1500
+      },
+      {
+        "id": 604,
+        "image": "/images/drinks/eva-water.png",
+        "name": "Bottled Water",
+        "description": "Still or sparkling bottled water.",
+        "price": 1000
+      }
+]

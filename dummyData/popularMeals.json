@@ -1,0 +1,30 @@
+[
+  {
+    "id": 805,
+    "image": "/images/popular/potato.png",
+    "name": "Potato Potage",
+    "description": "A flavorful tomato-based sauce for stews and soups.",
+    "price": "1,500"
+  },
+  {
+    "id": 301,
+    "image": "/images/protein/culet.png",
+    "name": "Chicken Cutlets",
+    "description": "Tender chicken pieces simmered in a flavorful sauce.",
+    "price": "3,000"
+  },
+  {
+    "id": 501,
+    "image": "/images/sause/chiken sause.png",
+    "name": "Chicken Stew",
+    "description": "A flavorful tomato-based sauce for stews and soups.",
+    "price": "3,500"
+  },
+  {
+    "id": 705,
+    "image": "/images/sause/chiken sause.png",
+    "name": "Special Salad",
+    "description": "A flavorful tomato-based sauce for stews and soups.",
+    "price": "5,500"
+  }
+]
