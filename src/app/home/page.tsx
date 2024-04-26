@@ -1,5 +1,5 @@
 "use client"
-import Header from "@/components/Header";
+// import Header from "@/components/Header";
 import ItemDetail from "@/components/ItemDetail";
 import ScrollableContent from "@/components/Scrollable";
 import MenuComponent from "@/components/SideBar";

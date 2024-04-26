@@ -35,7 +35,7 @@ const MenuComponent: React.FC = () => {
             className="fixed inset-0 bg-black opacity-50 transition duration-200"
             onClick={toggleMenu}></div>
           {/* Sidebar modal */}
-          <div className="fixed inset-y-0 left-0 w-3/5 bg-white shadow-md transform transition-transform duration-700 ease-in-out ">
+          <div className="fixed inset-y-0 left-0 w-3/5 md:w-[40%] lg:w-[30%] xl:w-[20%] bg-white shadow-md transform transition-transform duration-700 ease-in-out ">
             {/* Sidebar content */}
             <div className=" h-screen p-9 flex flex-col justify-between">
               <div className=" gap-9 flex flex-col ">
@@ -89,7 +89,7 @@ const MenuComponent: React.FC = () => {
                   </p>
                 </div>
 
-                <h2 className=" text-[#F36829] text-base font-semibold flex justify-center items-center">
+                <h2 className=" text-[#F36829] text-base font-semibold flex justify-start items-start">
                   Ordering From 14b Fourth Floor Connecting Rooms
                 </h2>
               </div>
