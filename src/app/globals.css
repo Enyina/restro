@@ -20,12 +20,15 @@
 
 body {
   color: var(--text-color);
-  background-image: url("/images/hero.png");
+  /* background-image: url("/images/hero.png"); */
   /* box-sizing: border-box; */
-  font-family: Inter;
+  /* font-family: inter; */
   padding: 2%;
+  background-color: #fff;
   
 }
+
+
 
 @layer utilities {
   .text-balance {

@@ -8,7 +8,7 @@ import Menu from "../../dummyData/allCategory.json"
 import { useDispatch } from "react-redux";
 import { pushId } from "@/app/GlobalRedux/features/cart/cartSlice";
 
-interface ModalContentProps {
+export interface ModalContentProps {
   onOpen: () => void;
 }
 
@@ -286,7 +286,7 @@ const Drawer: React.FC<ModalContentProps> = ({onOpen}) => {
       <div className="flex items-center justify-center  pt-10 px-4 sm:p-6 md:p-8">
         <div className="w-full overflow-hidden">
           {/* Category List */}
-          <div className=" flex overflow-x-scroll scrollbar-hide gap-6">
+          <div  className=" flex overflow-x-scroll no-scrollbar gap-6">
             {Menu.map((category) => (
               <div
                 key={category.categoryId}

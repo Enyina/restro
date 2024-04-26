@@ -21,7 +21,7 @@ const Recommendations: React.FC<{ recommendations: Recommendation[] }> = ({
         <p>What would you like to add?</p>
       </div>
 
-      <div className=" mt-4 flex gap-8  overflow-x-auto  ">
+      <div className=" mt-4 flex gap-8  overflow-x-auto no-scrollbar ">
         {recommendations.map((item: Recommendation) => (
           <div
             key={item.id || Math.random()}

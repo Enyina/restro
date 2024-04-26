@@ -81,17 +81,17 @@ const Page = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   return (
-    <div className=" relative">
+    <div className="">
       {/* HERO */}
-      <div className="relative">
+      <div  className=" h-screen flex flex-col p-0">
          {" "}
         <div
           style={{
             backgroundImage: `url(${"/images/hero.png"})`,
           }}
-          className="fixed inset-x-0 top-0 z-50 h-40 bg-cover">
-          <div className="absolute w-[89%] h-12 -mt-4  top-[100%] inset-x-1 mx-auto ">
-          <Search />
+          className="relative z-50 w-full h-40  md:h-60 lg:h-60 xl:h-60 bg-cover  -mt-8">
+          <div className="absolute w-[89%] h-12 bottom-0 inset-x-1 -mb-8 mx-auto   ">
+          <Search  onOpen={openModal}/>
           </div>
           <div className="bg-transparent absolute top-12 left-4">
             <h1 className="text-3xl  text-white font-bold ">Delicious Meals</h1>
@@ -105,7 +105,7 @@ const Page = () => {
 
       </div>
 
-      <div className=" m-auto  w-[100%] p-6 pt-14 mt-32">
+      <div className=" flex-grow overflow-y-auto  m-auto  w-[100%] p-6 pt-14 no-scrollbar">
         <div className=" flex justify-between items-center ">
           <h2 className=" text-black text-lg font-bold">Popular Meals</h2>
           <h2 ><Link className=" text-green-600 text-sm underline" href="/menu">View All Menu</Link></h2>

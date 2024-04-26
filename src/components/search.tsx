@@ -5,12 +5,15 @@ import { CiSearch } from "react-icons/ci";
 // import { menu } from './drawer';
 import Menu from "../../dummyData/allCategory.json"
 import Link from 'next/link';
+import { useDispatch } from "react-redux";
+import { pushId } from "@/app/GlobalRedux/features/cart/cartSlice";
+import { ModalContentProps } from './drawer';
 
 
-const Search = () => {
+const Search :React.FC<ModalContentProps> = ({onOpen}) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [menuItems, setMenuItems] = useState<any[]>([]);
-
+  const dispatch = useDispatch()
   useEffect(() => {
     // fetchMenuItems();
     setMenuItems(Menu);
@@ -37,6 +40,10 @@ const Search = () => {
     return [...filteredProducts, ...matchingProducts];
   }, []);
  }
+ const handleItemClick = (itemId : number)=>{
+  dispatch(pushId({itemId}))
+  onOpen()
+}
   return (
     <div className="flex ml-0.5 justify-center h-full w-full   items-center relative">
     <input
@@ -48,10 +55,10 @@ const Search = () => {
         />
         <div className=" absolute left-1 text-gray-900 ml-2 text-2xl"><CiSearch style={{}} /></div>
       {searchQuery.length > 0 &&(
-    <div className="absolute top-full left-0 w-full overflow-y-auto max-h-36 shadow-md bg-default_background_color p-2 z-50 mt-2  "> <ul className=" p-2 list-none">
+    <div className="absolute top-full left-0 w-full overflow-y-auto max-h-36 shadow-md bg-default_background_color p-2 z-40 mt-2  "> <ul className=" p-2 list-none">
     {filteredMenuItems.map((item:MenuContentItem) => (
       
-          <li key={item.id} className='flex gap-2 justify-start items-center p-1' > <Link href={`/product/${item.id}`}> <span className="inline-block w-1.5 h-1.5 mr-2 bg-[#408023] rounded-full"></span>{item.name} </Link> </li>
+          <li key={item.id} className='flex gap-2 justify-start items-center p-1'onClick={()=>handleItemClick(item.id)} >  <span className="inline-block w-1.5 h-1.5 mr-2 bg-[#408023] rounded-full"></span>{item.name}  </li>
         ))}
         </ul>
     </div>     )}
