@@ -89,7 +89,7 @@ const Page = () => {
           style={{
             backgroundImage: `url(${"/images/hero.png"})`,
           }}
-          className="relative rounded-t-3xl z-50 w-full h-40  md:h-60 lg:h-60 xl:h-60 bg-cover  -mt-8">
+          className="relative rounded-t-3xl z-50 w-full h-48  md:h-60 lg:h-60 xl:h-60 bg-cover  -mt-8">
           <div className="absolute w-[89%] h-12 bottom-0 inset-x-1 -mb-8 mx-auto   ">
           <Search  onOpen={openModal}/>
           </div>
