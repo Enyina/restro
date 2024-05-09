@@ -159,13 +159,16 @@ const decrease =()=>{
       {/* Top Section Image to DESC Start */}
       {/* <div className="p-7"> */}
       <div className="">
+        <div className=" flex flex-col items-center justify-center">
+
         <Image
           src={product?.image}
           alt=""
-          width={100}
-          height={100}
-          className="h-72 mt-9 w-full rounded-full "
+          width={225}
+          height={225}
+          className=" mt-9 w-full rounded-full object-center"
         />
+        </div>
         <Image
           src={"/images/iconX.png"}
           alt=""
