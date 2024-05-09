@@ -290,7 +290,7 @@ const Drawer: React.FC<ModalContentProps> = ({onOpen}) => {
             {Menu.map((category) => (
               <div
                 key={category.categoryId}
-                className={` flex h-11 w-32 px-9  rounded-3xl gap-1  justify-center items-center ${
+                className={` flex h-11 w-32 pl-5 pr-9 rounded-3xl gap-1  justify-center items-center ${
                   activeCategory === category.categoryId
                     ? "bg-orange-500"
                     : "bg-[#DFDFDF]"
