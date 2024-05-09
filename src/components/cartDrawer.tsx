@@ -20,7 +20,7 @@ const CartDrawer = () => {
             type="button"
             onClick={() => action("single")}
             className={`
-              tab flex justify-center items-center p-2 rounded-2xl cursor-pointer
+              tab flex justify-center items-center py-2 px-4 rounded-3xl cursor-pointer
               ${drawerState === "single" ? " bg-Primary_color text-white" : "text-gray-700"}
             `}>
             <p
@@ -34,7 +34,7 @@ const CartDrawer = () => {
             type="button"
             onClick={() => action("family")}
             className={`
-              tab flex justify-center items-center p-2 rounded-2xl cursor-pointer
+              tab flex justify-center items-center py-2 px-4 rounded-3xl cursor-pointer
               ${drawerState === "family" ? " bg-Primary_color text-white" : "text-gray-700"}
             `}>
             <p
