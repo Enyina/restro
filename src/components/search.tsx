@@ -43,6 +43,7 @@ const Search :React.FC<ModalContentProps> = ({onOpen}) => {
  const handleItemClick = (itemId : number)=>{
   dispatch(pushId({itemId}))
   onOpen()
+  setSearchQuery("")
 }
   return (
     <div className="flex ml-0.5 justify-center h-full w-full   items-center relative">
@@ -54,7 +55,7 @@ const Search :React.FC<ModalContentProps> = ({onOpen}) => {
         className=" h-full w-full border-none bg-white pl-10 px-4 py-2  rounded-xl group"
         />
         <div className=" absolute left-1 text-gray-900 ml-2 text-2xl"><CiSearch style={{}} /></div>
-      {searchQuery.length > 0 &&(
+      {searchQuery.length > 0 && (
     <div className="absolute top-full left-0 w-full overflow-y-auto max-h-36 shadow-md bg-default_background_color p-2 z-40 mt-2  "> <ul className=" p-2 list-none">
     {filteredMenuItems.map((item:MenuContentItem) => (
       
