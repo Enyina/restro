@@ -244,7 +244,7 @@ const Page = () => {
 
             <p className="pricing_details_right">N {state === "single"? singleOrderTotalPriceSum.toLocaleString() : familyOrderTotalPriceSum.toLocaleString()}</p>
           </div>
-          <div className="flex gap-5">
+          <div className="flex justify-between">
             <button
               className=" bg-Primary_color flex justify-center items-center p-3 rounded-lg text-white w-40 "
               onClick={openDisclaimerModal}>

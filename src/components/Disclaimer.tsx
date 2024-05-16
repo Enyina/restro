@@ -61,7 +61,7 @@ const DisclaimerModal: React.FC<DisclaimerModalProps> = ({
 
       
 
-       <button className=' rounded-xl bg-Primary_color  py-2 px-10 text-nowrap' > <Link href="/order-tracking" className=''>Proceed Now       </Link></button>
+       <button className=' rounded-xl bg-Primary_color  py-2 px-10 text-nowrap' > <Link href="/order-tracking" className=' text-white'>Proceed Now       </Link></button>
 
         </div>
       </div>

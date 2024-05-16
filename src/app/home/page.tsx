@@ -133,7 +133,7 @@ const Page = () => {
       </div>
       </div>
 
-       <div className={`${isModalOpen? " fixed top-0  translate-y-0 ": " translate-y-full hidden"} w-full z-50  transition duration-500 ease-in-out`}>  <ItemDetail onClose={closeModal} /> </div>
+       <div className={`${isModalOpen? " absolute top-0 z-50  translate-y-0 block ": " translate-y-full hidden"} w-full z-50  transition duration-500 ease-in-out`}>  <ItemDetail onClose={closeModal} /> </div>
      {isAdded && (
      <div className="fixed top-9 left-1/2  text-nowrap -translate-x-1/2 bg-[#5A8A2A] text-white rounded-lg px-4 py-2 z-50 transform transition-transform duration-300 ease-in-out translate-y-0">
         Item Successfully Added To Order List
